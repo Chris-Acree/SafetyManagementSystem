@@ -1,0 +1,145 @@
+﻿@model SafetyManagementSystem.Models.HazardReports
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HazardReports</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportedByEmployee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReportedByEmployee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportedByEmpDept)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReportedByEmpDept)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Witnesses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Witnesses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AffectedPersonnel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AffectedPersonnel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HazardLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HazardLocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InvolvedMaterial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvolvedMaterial)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Issue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Issue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HazardPotential)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HazardPotential)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HazardReportDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HazardReportDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RegulatoryViolation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RegulatoryViolation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Supervisor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Supervisor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Manager)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Manager)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SuggestedCorrections)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SuggestedCorrections)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CorrectiveAction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CorrectiveAction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RequiredPurchases)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RequiredPurchases)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CostOfPurchases)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CostOfPurchases)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateImplemented)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateImplemented)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminEmployee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdminEmployee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdminDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HazardCategory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HazardCategory.HazardCategory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Site.SiteName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.HazardReportId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

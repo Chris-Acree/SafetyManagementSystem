@@ -1,0 +1,156 @@
+﻿@model IEnumerable<SafetyManagementSystem.Models.HazardReports>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReportedByEmployee)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReportedByEmpDept)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Witnesses)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AffectedPersonnel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HazardLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvolvedMaterial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Issue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HazardPotential)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HazardReportDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegulatoryViolation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Supervisor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Manager)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SuggestedCorrections)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CorrectiveAction)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RequiredPurchases)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CostOfPurchases)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateImplemented)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdminEmployee)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdminDate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HazardCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Site)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportedByEmployee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportedByEmpDept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Witnesses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AffectedPersonnel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HazardLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvolvedMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Issue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HazardPotential)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HazardReportDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegulatoryViolation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supervisor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manager)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuggestedCorrections)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorrectiveAction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequiredPurchases)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostOfPurchases)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateImplemented)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminEmployee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HazardCategory.HazardCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Site.SiteName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HazardReportId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.HazardReportId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.HazardReportId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
